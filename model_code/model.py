@@ -100,7 +100,7 @@ class CrossAttention(nn.Module):
         return x + self.out(attended).transpose(1, 2).reshape(b, c, h, w)
 
 
-# 小型 Transformer 与图像网络一起训练，embedding/位置向量也从随机权重开始。
+# 小型 Transformer 从头初始化，与图像网络一起训练；字符 PAD 嵌入初值为零。
 class TextEncoder(nn.Module):
     def __init__(self, vocab_size, cfg):
         super().__init__()

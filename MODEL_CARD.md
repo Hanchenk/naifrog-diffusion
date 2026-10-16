@@ -5,7 +5,7 @@
 - 作者：Hanchenk；发布仓库：https://github.com/Hanchenk/naifrog-diffusion
 - 类型：64×64 RGB 像素空间中文文本条件扩散模型，epsilon prediction。
 - 参数量：9,436,083；U-Net base=48；字符 Transformer width=128、2 层、最大 64 token。
-- 初始化：图像网络、文本网络、embedding、位置向量与交叉注意力全部随机初始化；未使用任何预训练权重。
+- 初始化：图像网络、文本网络、embedding、位置向量与交叉注意力均从头初始化，未加载任何预训练参数。主体权重随机初始化；输出卷积的权重和偏置显式初始化为零。归一化参数、部分偏置和 PAD 字符嵌入采用 PyTorch 的常量初值。
 - 文件：`naifrog_ema.pt`，37,840,187 字节；仅 EMA 推理参数、架构、词表和训练元数据，不包含优化器。
 - SHA256：`5445e9ef7fca9c1b47a1c235995d09b7aaaadcd3974290d6c9d5fd751e64777e`。
 - 许可：代码与发布权重 MIT；不包含对第三方角色/商标/原始资产的授权。
