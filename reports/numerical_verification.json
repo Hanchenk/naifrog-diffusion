@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "device": "cpu",
+  "forward_inverse_max_error": 4.172325134277344e-07,
+  "fixed_batch_initial_mse": 0.9896945357322693,
+  "fixed_batch_final_mse": 0.7258580327033997,
+  "text_gradient_l1": 0.10660092659236398,
+  "padding_mask_max_error": 0.0,
+  "oracle_ddim_max_error": 0.0,
+  "checkpoint_roundtrip_max_error": 0.0,
+  "cfg_zero_prompt_independence_max_error": 0.0,
+  "fixed_seed_repeatability": true
+}

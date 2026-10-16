@@ -1,0 +1,13 @@
+{
+  "python_syntax": "passed",
+  "node_cjs_syntax": "passed",
+  "renderer_module_syntax": "passed",
+  "model_and_evaluation_executable_ast_identical_to_trained_source": true,
+  "private_text_scan": "passed",
+  "private_checkpoint_metadata_scan": "passed",
+  "checkpoint_absolute_path_scan": "passed",
+  "inference_weights_sha256": "5445e9ef7fca9c1b47a1c235995d09b7aaaadcd3974290d6c9d5fd751e64777e",
+  "inference_weights_bytes": 37840187,
+  "runtime_numerical_verification": "original trained source passed; published executable AST identical",
+  "data_renderer_execution": "requires user-supplied assets/character.glb; original asset is not redistributed"
+}

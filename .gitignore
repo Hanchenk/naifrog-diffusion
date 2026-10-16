@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+data/
+runs/
+outputs/
+assets/*.fbx
+assets/*.glb
+assets/*.gltf
+release-assets/*
+!release-assets/README.md
+*.pt
+*.pth
+.DS_Store

@@ -1,0 +1,41 @@
+<!doctype html><html><meta charset="utf-8"><style>html,body{margin:0}canvas{display:block}</style><script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js"}}</script><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setSize(128,128);renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
+document.body.appendChild(renderer.domElement);
+const scene=new THREE.Scene();
+const camera=new THREE.OrthographicCamera(-2,2,2,-2,.1,100);
+const hemisphere=new THREE.HemisphereLight(0xfff7e6,0x8992a1,2.3);scene.add(hemisphere);
+const key=new THREE.DirectionalLight(0xfffaec,3.9);key.position.set(-4,6,7);scene.add(key);
+const fill=new THREE.DirectionalLight(0xdce8ff,2);fill.position.set(4,2,4);scene.add(fill);
+const rim=new THREE.DirectionalLight(0xffffff,2.7);rim.position.set(1,4,-4);scene.add(rim);
+// 原始角色资产不随仓库分发；请将有使用权的 GLB 放到 assets/character.glb。
+const model=(await new GLTFLoader().loadAsync('../assets/character.glb')).scene;
+model.updateMatrixWorld(true);const b=new THREE.Box3().setFromObject(model),c=b.getCenter(new THREE.Vector3()),s=b.getSize(new THREE.Vector3()),scale=3.35/s.y;
+model.scale.multiplyScalar(scale);model.position.set(-c.x*scale,-c.y*scale,-c.z*scale);scene.add(model);
+const colors={blue:'#9db9e8',pink:'#efb8cc',green:'#b3d8bc',white:'#f3f3ef'};
+function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
+// 每行 JSONL 的 seed 唯一决定颜色微扰、相机位置和灯光，便于数据追溯。
+window.renderItem=(item)=>{
+ const r=rng(item.seed),range=(a,b)=>a+(b-a)*r();
+ const base=new THREE.Color(colors[item.background]);
+ base.offsetHSL(range(-.008,.008),range(-.025,.025),range(-.025,.025));scene.background=base;
+ let yaw=item.view==='left'?range(-40,-25):item.view==='right'?range(25,40):range(-8,8);
+ const angle=yaw*Math.PI/180,pitch=range(3,10)*Math.PI/180;
+ const half=item.framing==='close'?range(1.55,1.65):range(1.98,2.12);
+ const centerY=item.framing==='close'?range(.22,.32):range(-.04,.04);
+ const centerX=range(-.08,.08);
+ camera.left=-half;camera.right=half;camera.top=half;camera.bottom=-half;camera.updateProjectionMatrix();
+ camera.position.set(Math.sin(angle)*10,Math.sin(pitch)*10+centerY,Math.cos(angle)*10);
+ camera.lookAt(centerX,centerY,0);
+ key.intensity=range(3.5,4.3);fill.intensity=range(1.7,2.4);hemisphere.intensity=range(2.1,2.6);
+ key.position.set(range(-5,-3),range(5,7),range(6,8));
+ model.rotation.set(range(-.012,.012),0,range(-.018,.018));
+ renderer.render(scene,camera);
+ return renderer.domElement.toDataURL('image/png').split(',')[1];
+};
+window.renderBatch=(items)=>items.map(window.renderItem);
+window.__ready=true;
+</script></html>

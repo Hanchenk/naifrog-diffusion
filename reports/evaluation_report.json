@@ -1,0 +1,2799 @@
+{
+  "training_manifest": "data/train.jsonl",
+  "generated_manifest": "results/final_generated/generated.jsonl",
+  "training_images": 4080,
+  "generated_images": 72,
+  "image_size": [
+    64,
+    64
+  ],
+  "seeds": [
+    "123",
+    "2026",
+    "42"
+  ],
+  "combinations_per_seed": 24,
+  "background_metric": {
+    "method": "Median RGB over four 6x6 corner patches; nearest empirical training-background RGB centroid",
+    "canonical_render_color_specification": {
+      "blue": "#9db9e8",
+      "pink": "#efb8cc",
+      "green": "#b3d8bc",
+      "white": "#f3f3ef"
+    },
+    "empirical_training_corner_medians_rgb": {
+      "blue": [
+        157.0,
+        185.0,
+        232.0
+      ],
+      "pink": [
+        239.0,
+        184.0,
+        204.0
+      ],
+      "green": [
+        179.0,
+        216.0,
+        188.0
+      ],
+      "white": [
+        243.0,
+        243.0,
+        239.0
+      ]
+    },
+    "target_match_count": 72,
+    "target_match_rate": 1.0,
+    "mean_target_rgb_rmse_0_to_1": 0.10323093472454802
+  },
+  "pixel_nearest_neighbor_metric": {
+    "distance": "sqrt(mean((generated_RGB-training_RGB)^2))/255 over all 64x64x3 channels",
+    "minimum_rmse": 0.05884059018658006,
+    "median_rmse": 0.09091436612327716,
+    "mean_rmse": 0.09679695400640614,
+    "generated_images_with_exact_rgb_training_match": 0,
+    "caveat": "Pixel nearest-neighbor distance is sensitive to background, camera, alignment and lighting. A nonzero distance cannot prove absence of memorization, and a small distance alone cannot prove copying."
+  },
+  "factor_comparisons": [
+    {
+      "seed": "42",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "42",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "pink"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.2223905891897829
+    },
+    {
+      "seed": "42",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "green"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.15941479244561146
+    },
+    {
+      "seed": "42",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "white"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.26157166972341767
+    },
+    {
+      "seed": "42",
+      "varied_factor": "view",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "42",
+      "varied_factor": "view",
+      "condition": [
+        "left",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.14410397774865907
+    },
+    {
+      "seed": "42",
+      "varied_factor": "view",
+      "condition": [
+        "right",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.17463721900111873
+    },
+    {
+      "seed": "42",
+      "varied_factor": "framing",
+      "condition": [
+        "front",
+        "close",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.17055917658156913
+    },
+    {
+      "seed": "42",
+      "varied_factor": "framing",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "123",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "123",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "pink"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.23270391111896696
+    },
+    {
+      "seed": "123",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "green"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.17257733353554022
+    },
+    {
+      "seed": "123",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "white"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.2843061937319374
+    },
+    {
+      "seed": "123",
+      "varied_factor": "view",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "123",
+      "varied_factor": "view",
+      "condition": [
+        "left",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.15990213109555212
+    },
+    {
+      "seed": "123",
+      "varied_factor": "view",
+      "condition": [
+        "right",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.14475642672594338
+    },
+    {
+      "seed": "123",
+      "varied_factor": "framing",
+      "condition": [
+        "front",
+        "close",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.17073549613751632
+    },
+    {
+      "seed": "123",
+      "varied_factor": "framing",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "pink"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.21703011569475808
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "green"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.15598096552115442
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "background",
+      "condition": [
+        "front",
+        "full",
+        "white"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.26188821067170015
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "view",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "view",
+      "condition": [
+        "left",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.1272349273655545
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "view",
+      "condition": [
+        "right",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.15351132995895037
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "framing",
+      "condition": [
+        "front",
+        "close",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.17738956125046312
+    },
+    {
+      "seed": "2026",
+      "varied_factor": "framing",
+      "condition": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "reference": [
+        "front",
+        "full",
+        "blue"
+      ],
+      "pixel_change_rmse_0_to_1": 0.0
+    }
+  ],
+  "images": [
+    {
+      "image": "images/seed-42_front_close_blue.png",
+      "file_name": "images/seed-42_front_close_blue.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，蓝色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "blue",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        117.0,
+        154.0,
+        219.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11829884807057534,
+      "nearest_neighbor": {
+        "train_index": 102,
+        "nearest_image": "images/train/000102.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.0921117174157452,
+        "same_factors_train_index": 102,
+        "same_factors_nearest_image": "images/train/000102.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0921117174157452,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_close_pink.png",
+      "file_name": "images/seed-42_front_close_pink.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，粉色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "pink",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        224.0,
+        153.0,
+        175.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10193564295363086,
+      "nearest_neighbor": {
+        "train_index": 1670,
+        "nearest_image": "images/train/001670.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.09406376378742216,
+        "same_factors_train_index": 1670,
+        "same_factors_nearest_image": "images/train/001670.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09406376378742216,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_close_green.png",
+      "file_name": "images/seed-42_front_close_green.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，绿色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "green",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        149.0,
+        202.0,
+        159.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.09964694821907934,
+      "nearest_neighbor": {
+        "train_index": 1956,
+        "nearest_image": "images/train/001956.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.07825494607555301,
+        "same_factors_train_index": 1956,
+        "same_factors_nearest_image": "images/train/001956.png",
+        "same_factors_pixel_rmse_0_to_1": 0.07825494607555301,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_close_white.png",
+      "file_name": "images/seed-42_front_close_white.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，白色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "white",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        230.0,
+        233.0,
+        227.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.046012329168099456,
+      "nearest_neighbor": {
+        "train_index": 1148,
+        "nearest_image": "images/train/001148.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.06342047928821468,
+        "same_factors_train_index": 1148,
+        "same_factors_nearest_image": "images/train/001148.png",
+        "same_factors_pixel_rmse_0_to_1": 0.06342047928821468,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_full_blue.png",
+      "file_name": "images/seed-42_front_full_blue.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，蓝色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "blue",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        116.0,
+        155.0,
+        217.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1199341952940036,
+      "nearest_neighbor": {
+        "train_index": 1847,
+        "nearest_image": "images/train/001847.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.10266923990637464,
+        "same_factors_train_index": 1847,
+        "same_factors_nearest_image": "images/train/001847.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10266923990637464,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_full_pink.png",
+      "file_name": "images/seed-42_front_full_pink.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，粉色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "pink",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        222.0,
+        148.0,
+        169.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.12001964895307744,
+      "nearest_neighbor": {
+        "train_index": 1916,
+        "nearest_image": "images/train/001916.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.09905839606035088,
+        "same_factors_train_index": 1916,
+        "same_factors_nearest_image": "images/train/001916.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09905839606035088,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_full_green.png",
+      "file_name": "images/seed-42_front_full_green.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，绿色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "green",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        147.0,
+        202.0,
+        157.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10573700990362951,
+      "nearest_neighbor": {
+        "train_index": 2340,
+        "nearest_image": "images/train/002340.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.09348881903034698,
+        "same_factors_train_index": 2340,
+        "same_factors_nearest_image": "images/train/002340.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09348881903034698,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_front_full_white.png",
+      "file_name": "images/seed-42_front_full_white.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，白色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "white",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        228.0,
+        232.0,
+        224.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.05410248911522844,
+      "nearest_neighbor": {
+        "train_index": 2110,
+        "nearest_image": "images/train/002110.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.07744348230438078,
+        "same_factors_train_index": 2110,
+        "same_factors_nearest_image": "images/train/002110.png",
+        "same_factors_pixel_rmse_0_to_1": 0.07744348230438078,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_close_blue.png",
+      "file_name": "images/seed-42_left_close_blue.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，蓝色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "blue",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        114.0,
+        152.0,
+        219.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.12620304070940966,
+      "nearest_neighbor": {
+        "train_index": 3563,
+        "nearest_image": "images/train/003563.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.10029649652332459,
+        "same_factors_train_index": 3563,
+        "same_factors_nearest_image": "images/train/003563.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10029649652332459,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_close_pink.png",
+      "file_name": "images/seed-42_left_close_pink.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，粉色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "pink",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        224.0,
+        154.0,
+        178.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.09608510047548785,
+      "nearest_neighbor": {
+        "train_index": 2938,
+        "nearest_image": "images/train/002938.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.0870647466455389,
+        "same_factors_train_index": 2938,
+        "same_factors_nearest_image": "images/train/002938.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0870647466455389,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_close_green.png",
+      "file_name": "images/seed-42_left_close_green.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，绿色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "green",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        146.0,
+        200.0,
+        158.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10727718400180043,
+      "nearest_neighbor": {
+        "train_index": 3385,
+        "nearest_image": "images/train/003385.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.09383789906205947,
+        "same_factors_train_index": 3385,
+        "same_factors_nearest_image": "images/train/003385.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09383789906205947,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_close_white.png",
+      "file_name": "images/seed-42_left_close_white.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，白色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "white",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        229.0,
+        233.0,
+        230.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.04396123325699408,
+      "nearest_neighbor": {
+        "train_index": 1360,
+        "nearest_image": "images/train/001360.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.06709952386463766,
+        "same_factors_train_index": 1360,
+        "same_factors_nearest_image": "images/train/001360.png",
+        "same_factors_pixel_rmse_0_to_1": 0.06709952386463766,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_full_blue.png",
+      "file_name": "images/seed-42_left_full_blue.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，蓝色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "blue",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        115.5,
+        152.0,
+        217.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.12475787135159226,
+      "nearest_neighbor": {
+        "train_index": 2991,
+        "nearest_image": "images/train/002991.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.10485756435424008,
+        "same_factors_train_index": 2991,
+        "same_factors_nearest_image": "images/train/002991.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10485756435424008,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_full_pink.png",
+      "file_name": "images/seed-42_left_full_pink.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，粉色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "pink",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        222.0,
+        147.0,
+        170.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.12010504181265534,
+      "nearest_neighbor": {
+        "train_index": 3662,
+        "nearest_image": "images/train/003662.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.10097289988029683,
+        "same_factors_train_index": 3662,
+        "same_factors_nearest_image": "images/train/003662.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10097289988029683,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_full_green.png",
+      "file_name": "images/seed-42_left_full_green.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，绿色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "green",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        144.0,
+        200.0,
+        154.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11626640847351839,
+      "nearest_neighbor": {
+        "train_index": 272,
+        "nearest_image": "images/train/000272.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.10056591380617948,
+        "same_factors_train_index": 272,
+        "same_factors_nearest_image": "images/train/000272.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10056591380617948,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_left_full_white.png",
+      "file_name": "images/seed-42_left_full_white.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，白色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "white",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        230.0,
+        233.0,
+        227.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.046012329168099456,
+      "nearest_neighbor": {
+        "train_index": 2358,
+        "nearest_image": "images/train/002358.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.07380943920198431,
+        "same_factors_train_index": 2358,
+        "same_factors_nearest_image": "images/train/002358.png",
+        "same_factors_pixel_rmse_0_to_1": 0.07380943920198431,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_close_blue.png",
+      "file_name": "images/seed-42_right_close_blue.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，蓝色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "blue",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        119.0,
+        155.0,
+        218.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11410798872049774,
+      "nearest_neighbor": {
+        "train_index": 3484,
+        "nearest_image": "images/train/003484.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.10206667089728455,
+        "same_factors_train_index": 3484,
+        "same_factors_nearest_image": "images/train/003484.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10206667089728455,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_close_pink.png",
+      "file_name": "images/seed-42_right_close_pink.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，粉色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "pink",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        224.0,
+        154.0,
+        176.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.09892411107196099,
+      "nearest_neighbor": {
+        "train_index": 2637,
+        "nearest_image": "images/train/002637.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.08938987783365118,
+        "same_factors_train_index": 2637,
+        "same_factors_nearest_image": "images/train/002637.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08938987783365118,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_close_green.png",
+      "file_name": "images/seed-42_right_close_green.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，绿色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "green",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        148.0,
+        202.0,
+        158.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10268720616205405,
+      "nearest_neighbor": {
+        "train_index": 664,
+        "nearest_image": "images/train/000664.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.08461056541887123,
+        "same_factors_train_index": 664,
+        "same_factors_nearest_image": "images/train/000664.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08461056541887123,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_close_white.png",
+      "file_name": "images/seed-42_right_close_white.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，白色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "white",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        229.0,
+        234.0,
+        228.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.0451690262566562,
+      "nearest_neighbor": {
+        "train_index": 1672,
+        "nearest_image": "images/train/001672.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.08129851375751247,
+        "same_factors_train_index": 1672,
+        "same_factors_nearest_image": "images/train/001672.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08129851375751247,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_full_blue.png",
+      "file_name": "images/seed-42_right_full_blue.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，蓝色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "blue",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        116.0,
+        154.0,
+        215.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.12257646751441399,
+      "nearest_neighbor": {
+        "train_index": 2122,
+        "nearest_image": "images/train/002122.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.10610933595339567,
+        "same_factors_train_index": 2122,
+        "same_factors_nearest_image": "images/train/002122.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10610933595339567,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_full_pink.png",
+      "file_name": "images/seed-42_right_full_pink.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，粉色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "pink",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        222.0,
+        150.0,
+        170.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11547005383792516,
+      "nearest_neighbor": {
+        "train_index": 334,
+        "nearest_image": "images/train/000334.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.10578642031156152,
+        "same_factors_train_index": 334,
+        "same_factors_nearest_image": "images/train/000334.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10578642031156152,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_full_green.png",
+      "file_name": "images/seed-42_right_full_green.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，绿色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "green",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        147.0,
+        201.0,
+        156.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10794410009516198,
+      "nearest_neighbor": {
+        "train_index": 3936,
+        "nearest_image": "images/train/003936.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.10162654694189258,
+        "same_factors_train_index": 3936,
+        "same_factors_nearest_image": "images/train/003936.png",
+        "same_factors_pixel_rmse_0_to_1": 0.10162654694189258,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-42_right_full_white.png",
+      "file_name": "images/seed-42_right_full_white.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，白色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "white",
+      "seed": 42,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "corner_median_rgb": [
+        229.0,
+        230.0,
+        223.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.056421547333090814,
+      "nearest_neighbor": {
+        "train_index": 3494,
+        "nearest_image": "images/train/003494.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.0824039191031252,
+        "same_factors_train_index": 3494,
+        "same_factors_nearest_image": "images/train/003494.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0824039191031252,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_close_blue.png",
+      "file_name": "images/seed-123_front_close_blue.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，蓝色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "blue",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        104.5,
+        143.0,
+        217.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.15596557157132768,
+      "nearest_neighbor": {
+        "train_index": 1849,
+        "nearest_image": "images/train/001849.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.13011374880678955,
+        "same_factors_train_index": 1849,
+        "same_factors_nearest_image": "images/train/001849.png",
+        "same_factors_pixel_rmse_0_to_1": 0.13011374880678955,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_close_pink.png",
+      "file_name": "images/seed-123_front_close_pink.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，粉色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "pink",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        217.0,
+        141.0,
+        167.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.13775818094313957,
+      "nearest_neighbor": {
+        "train_index": 1994,
+        "nearest_image": "images/train/001994.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.1217264314605715,
+        "same_factors_train_index": 1994,
+        "same_factors_nearest_image": "images/train/001994.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1217264314605715,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_close_green.png",
+      "file_name": "images/seed-123_front_close_green.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，绿色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "green",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        137.0,
+        194.0,
+        150.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.13757199599396464,
+      "nearest_neighbor": {
+        "train_index": 1956,
+        "nearest_image": "images/train/001956.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.12128120754537884,
+        "same_factors_train_index": 1956,
+        "same_factors_nearest_image": "images/train/001956.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12128120754537884,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_close_white.png",
+      "file_name": "images/seed-123_front_close_white.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，白色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "white",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        228.0,
+        231.0,
+        227.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.051281164041654975,
+      "nearest_neighbor": {
+        "train_index": 2512,
+        "nearest_image": "images/train/002512.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.08413219284353139,
+        "same_factors_train_index": 2512,
+        "same_factors_nearest_image": "images/train/002512.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08413219284353139,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_full_blue.png",
+      "file_name": "images/seed-123_front_full_blue.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，蓝色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "blue",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        106.0,
+        143.0,
+        215.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.15445870227572736,
+      "nearest_neighbor": {
+        "train_index": 1242,
+        "nearest_image": "images/train/001242.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.12707122459030826,
+        "same_factors_train_index": 1242,
+        "same_factors_nearest_image": "images/train/001242.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12707122459030826,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_full_pink.png",
+      "file_name": "images/seed-123_front_full_pink.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，粉色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "pink",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        215.0,
+        137.0,
+        162.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1527063724643098,
+      "nearest_neighbor": {
+        "train_index": 1998,
+        "nearest_image": "images/train/001998.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.12986143235696418,
+        "same_factors_train_index": 1998,
+        "same_factors_nearest_image": "images/train/001998.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12986143235696418,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_full_green.png",
+      "file_name": "images/seed-123_front_full_green.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，绿色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "green",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        138.0,
+        193.0,
+        148.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.13975317397023893,
+      "nearest_neighbor": {
+        "train_index": 1549,
+        "nearest_image": "images/train/001549.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.1254485366586049,
+        "same_factors_train_index": 1549,
+        "same_factors_nearest_image": "images/train/001549.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1254485366586049,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_front_full_white.png",
+      "file_name": "images/seed-123_front_full_white.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，白色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "white",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        225.0,
+        227.0,
+        222.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.06674351587565878,
+      "nearest_neighbor": {
+        "train_index": 3001,
+        "nearest_image": "images/train/003001.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.08633650186178111,
+        "same_factors_train_index": 3001,
+        "same_factors_nearest_image": "images/train/003001.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08633650186178111,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_close_blue.png",
+      "file_name": "images/seed-123_left_close_blue.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，蓝色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "blue",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        107.0,
+        142.0,
+        215.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.15419296667715687,
+      "nearest_neighbor": {
+        "train_index": 366,
+        "nearest_image": "images/train/000366.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.1336385071703813,
+        "same_factors_train_index": 366,
+        "same_factors_nearest_image": "images/train/000366.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1336385071703813,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_close_pink.png",
+      "file_name": "images/seed-123_left_close_pink.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，粉色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "pink",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        217.0,
+        141.0,
+        166.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.13914662744478565,
+      "nearest_neighbor": {
+        "train_index": 3327,
+        "nearest_image": "images/train/003327.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.12634236332128604,
+        "same_factors_train_index": 3327,
+        "same_factors_nearest_image": "images/train/003327.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12634236332128604,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_close_green.png",
+      "file_name": "images/seed-123_left_close_green.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，绿色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "green",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        135.0,
+        192.0,
+        147.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.14660933485024522,
+      "nearest_neighbor": {
+        "train_index": 2513,
+        "nearest_image": "images/train/002513.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.12873547025082732,
+        "same_factors_train_index": 2513,
+        "same_factors_nearest_image": "images/train/002513.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12873547025082732,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_close_white.png",
+      "file_name": "images/seed-123_left_close_white.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，白色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "white",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        227.0,
+        232.0,
+        228.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.05052587735970637,
+      "nearest_neighbor": {
+        "train_index": 1319,
+        "nearest_image": "images/train/001319.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.0884928173363447,
+        "same_factors_train_index": 1319,
+        "same_factors_nearest_image": "images/train/001319.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0884928173363447,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_full_blue.png",
+      "file_name": "images/seed-123_left_full_blue.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，蓝色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "blue",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        106.0,
+        141.0,
+        213.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.15845596133527495,
+      "nearest_neighbor": {
+        "train_index": 3435,
+        "nearest_image": "images/train/003435.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.1341139315683315,
+        "same_factors_train_index": 3435,
+        "same_factors_nearest_image": "images/train/003435.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1341139315683315,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_full_pink.png",
+      "file_name": "images/seed-123_left_full_pink.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，粉色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "pink",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        214.0,
+        137.0,
+        162.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1535266153886855,
+      "nearest_neighbor": {
+        "train_index": 194,
+        "nearest_image": "images/train/000194.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.13600364826977515,
+        "same_factors_train_index": 194,
+        "same_factors_nearest_image": "images/train/000194.png",
+        "same_factors_pixel_rmse_0_to_1": 0.13600364826977515,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_full_green.png",
+      "file_name": "images/seed-123_left_full_green.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，绿色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "green",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        135.0,
+        192.0,
+        145.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.14951757185434947,
+      "nearest_neighbor": {
+        "train_index": 1170,
+        "nearest_image": "images/train/001170.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.12582861949988192,
+        "same_factors_train_index": 1170,
+        "same_factors_nearest_image": "images/train/001170.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12582861949988192,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_left_full_white.png",
+      "file_name": "images/seed-123_left_full_white.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，白色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "white",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        226.0,
+        228.0,
+        223.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.06282674426508714,
+      "nearest_neighbor": {
+        "train_index": 891,
+        "nearest_image": "images/train/000891.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.09031045853259281,
+        "same_factors_train_index": 891,
+        "same_factors_nearest_image": "images/train/000891.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09031045853259281,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_close_blue.png",
+      "file_name": "images/seed-123_right_close_blue.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，蓝色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "blue",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        106.0,
+        143.0,
+        213.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.15564889823155564,
+      "nearest_neighbor": {
+        "train_index": 2095,
+        "nearest_image": "images/train/002095.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.1311061176983862,
+        "same_factors_train_index": 2095,
+        "same_factors_nearest_image": "images/train/002095.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1311061176983862,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_close_pink.png",
+      "file_name": "images/seed-123_right_close_pink.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，粉色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "pink",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        216.0,
+        140.0,
+        163.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1457853356505185,
+      "nearest_neighbor": {
+        "train_index": 637,
+        "nearest_image": "images/train/000637.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.1270874152806848,
+        "same_factors_train_index": 637,
+        "same_factors_nearest_image": "images/train/000637.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1270874152806848,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_close_green.png",
+      "file_name": "images/seed-123_right_close_green.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，绿色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "green",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        137.0,
+        193.0,
+        148.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.14126721847353882,
+      "nearest_neighbor": {
+        "train_index": 557,
+        "nearest_image": "images/train/000557.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.1296674994401444,
+        "same_factors_train_index": 557,
+        "same_factors_nearest_image": "images/train/000557.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1296674994401444,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_close_white.png",
+      "file_name": "images/seed-123_right_close_white.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，白色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "white",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        228.0,
+        230.0,
+        225.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.05499525220382387,
+      "nearest_neighbor": {
+        "train_index": 780,
+        "nearest_image": "images/train/000780.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.08824863308079398,
+        "same_factors_train_index": 780,
+        "same_factors_nearest_image": "images/train/000780.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08824863308079398,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_full_blue.png",
+      "file_name": "images/seed-123_right_full_blue.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，蓝色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "blue",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        106.0,
+        142.0,
+        212.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.15767762198450744,
+      "nearest_neighbor": {
+        "train_index": 2253,
+        "nearest_image": "images/train/002253.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.1384773103220033,
+        "same_factors_train_index": 2253,
+        "same_factors_nearest_image": "images/train/002253.png",
+        "same_factors_pixel_rmse_0_to_1": 0.1384773103220033,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_full_pink.png",
+      "file_name": "images/seed-123_right_full_pink.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，粉色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "pink",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        214.0,
+        138.0,
+        161.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1533929977694741,
+      "nearest_neighbor": {
+        "train_index": 3163,
+        "nearest_image": "images/train/003163.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.13439181940104936,
+        "same_factors_train_index": 3163,
+        "same_factors_nearest_image": "images/train/003163.png",
+        "same_factors_pixel_rmse_0_to_1": 0.13439181940104936,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_full_green.png",
+      "file_name": "images/seed-123_right_full_green.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，绿色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "green",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        137.0,
+        192.0,
+        146.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1450450353639759,
+      "nearest_neighbor": {
+        "train_index": 2848,
+        "nearest_image": "images/train/002848.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.12776885302702484,
+        "same_factors_train_index": 2848,
+        "same_factors_nearest_image": "images/train/002848.png",
+        "same_factors_pixel_rmse_0_to_1": 0.12776885302702484,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-123_right_full_white.png",
+      "file_name": "images/seed-123_right_full_white.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，白色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "white",
+      "seed": 123,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "corner_median_rgb": [
+        225.0,
+        227.0,
+        222.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.06674351587565878,
+      "nearest_neighbor": {
+        "train_index": 2518,
+        "nearest_image": "images/train/002518.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.0938617426991365,
+        "same_factors_train_index": 2518,
+        "same_factors_nearest_image": "images/train/002518.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0938617426991365,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_close_blue.png",
+      "file_name": "images/seed-2026_front_close_blue.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，蓝色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "blue",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        120.0,
+        153.0,
+        220.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11404058220360608,
+      "nearest_neighbor": {
+        "train_index": 98,
+        "nearest_image": "images/train/000098.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.09071890007765118,
+        "same_factors_train_index": 98,
+        "same_factors_nearest_image": "images/train/000098.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09071890007765118,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_close_pink.png",
+      "file_name": "images/seed-2026_front_close_pink.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，粉色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "pink",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        224.0,
+        152.0,
+        177.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1006960270461216,
+      "nearest_neighbor": {
+        "train_index": 228,
+        "nearest_image": "images/train/000228.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.08007530554636019,
+        "same_factors_train_index": 228,
+        "same_factors_nearest_image": "images/train/000228.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08007530554636019,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_close_green.png",
+      "file_name": "images/seed-2026_front_close_green.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，绿色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "green",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        153.0,
+        200.0,
+        163.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.08933949607760405,
+      "nearest_neighbor": {
+        "train_index": 1073,
+        "nearest_image": "images/train/001073.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.07885019214311417,
+        "same_factors_train_index": 1073,
+        "same_factors_nearest_image": "images/train/001073.png",
+        "same_factors_pixel_rmse_0_to_1": 0.07885019214311417,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_close_white.png",
+      "file_name": "images/seed-2026_front_close_white.png",
+      "caption": "奶蛙捧腹大笑，正面视角，近景，白色背景",
+      "view": "front",
+      "framing": "close",
+      "background": "white",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        231.0,
+        234.0,
+        230.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.03960590171906697,
+      "nearest_neighbor": {
+        "train_index": 1869,
+        "nearest_image": "images/train/001869.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.06669996134909126,
+        "same_factors_train_index": 1869,
+        "same_factors_nearest_image": "images/train/001869.png",
+        "same_factors_pixel_rmse_0_to_1": 0.06669996134909126,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_full_blue.png",
+      "file_name": "images/seed-2026_front_full_blue.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，蓝色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "blue",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        121.0,
+        155.0,
+        220.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10952345132367797,
+      "nearest_neighbor": {
+        "train_index": 1041,
+        "nearest_image": "images/train/001041.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.08697380129445716,
+        "same_factors_train_index": 1041,
+        "same_factors_nearest_image": "images/train/001041.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08697380129445716,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_full_pink.png",
+      "file_name": "images/seed-2026_front_full_pink.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，粉色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "pink",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        224.0,
+        150.0,
+        174.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10813389206605781,
+      "nearest_neighbor": {
+        "train_index": 2881,
+        "nearest_image": "images/train/002881.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.08513450197332639,
+        "same_factors_train_index": 2881,
+        "same_factors_nearest_image": "images/train/002881.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08513450197332639,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_full_green.png",
+      "file_name": "images/seed-2026_front_full_green.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，绿色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "green",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        154.0,
+        202.0,
+        162.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.0876012074654458,
+      "nearest_neighbor": {
+        "train_index": 1676,
+        "nearest_image": "images/train/001676.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.0755719175057378,
+        "same_factors_train_index": 1676,
+        "same_factors_nearest_image": "images/train/001676.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0755719175057378,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_front_full_white.png",
+      "file_name": "images/seed-2026_front_full_white.png",
+      "caption": "奶蛙捧腹大笑，正面视角，全身，白色背景",
+      "view": "front",
+      "framing": "full",
+      "background": "white",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        232.0,
+        233.0,
+        229.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.040565021305053336,
+      "nearest_neighbor": {
+        "train_index": 3001,
+        "nearest_image": "images/train/003001.png",
+        "nearest_caption": "奶蛙捧腹大笑，正面视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.05884059018658006,
+        "same_factors_train_index": 3001,
+        "same_factors_nearest_image": "images/train/003001.png",
+        "same_factors_pixel_rmse_0_to_1": 0.05884059018658006,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_close_blue.png",
+      "file_name": "images/seed-2026_left_close_blue.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，蓝色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "blue",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        124.0,
+        153.0,
+        219.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10815759264542538,
+      "nearest_neighbor": {
+        "train_index": 3603,
+        "nearest_image": "images/train/003603.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.09110983216890316,
+        "same_factors_train_index": 3603,
+        "same_factors_nearest_image": "images/train/003603.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09110983216890316,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_close_pink.png",
+      "file_name": "images/seed-2026_left_close_pink.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，粉色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "pink",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        226.0,
+        153.0,
+        178.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.09621838546184547,
+      "nearest_neighbor": {
+        "train_index": 1755,
+        "nearest_image": "images/train/001755.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.08360822476085206,
+        "same_factors_train_index": 1755,
+        "same_factors_nearest_image": "images/train/001755.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08360822476085206,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_close_green.png",
+      "file_name": "images/seed-2026_left_close_green.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，绿色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "green",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        151.0,
+        198.0,
+        160.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.0984826572645091,
+      "nearest_neighbor": {
+        "train_index": 2851,
+        "nearest_image": "images/train/002851.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.08685790904908477,
+        "same_factors_train_index": 2851,
+        "same_factors_nearest_image": "images/train/002851.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08685790904908477,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_close_white.png",
+      "file_name": "images/seed-2026_left_close_white.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，近景，白色背景",
+      "view": "left",
+      "framing": "close",
+      "background": "white",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        227.0,
+        234.0,
+        230.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.04629001623431575,
+      "nearest_neighbor": {
+        "train_index": 929,
+        "nearest_image": "images/train/000929.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.08159350016460404,
+        "same_factors_train_index": 929,
+        "same_factors_nearest_image": "images/train/000929.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08159350016460404,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_full_blue.png",
+      "file_name": "images/seed-2026_left_full_blue.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，蓝色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "blue",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        120.0,
+        151.0,
+        219.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11751626716683684,
+      "nearest_neighbor": {
+        "train_index": 3202,
+        "nearest_image": "images/train/003202.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.09198044819343638,
+        "same_factors_train_index": 3202,
+        "same_factors_nearest_image": "images/train/003202.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09198044819343638,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_full_pink.png",
+      "file_name": "images/seed-2026_left_full_pink.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，粉色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "pink",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        224.0,
+        148.0,
+        175.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.11003710068358148,
+      "nearest_neighbor": {
+        "train_index": 950,
+        "nearest_image": "images/train/000950.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.0866446990964821,
+        "same_factors_train_index": 950,
+        "same_factors_nearest_image": "images/train/000950.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0866446990964821,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_full_green.png",
+      "file_name": "images/seed-2026_left_full_green.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，绿色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "green",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        149.0,
+        198.0,
+        159.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10288669582296672,
+      "nearest_neighbor": {
+        "train_index": 1669,
+        "nearest_image": "images/train/001669.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.08802303894633827,
+        "same_factors_train_index": 1669,
+        "same_factors_nearest_image": "images/train/001669.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08802303894633827,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_left_full_white.png",
+      "file_name": "images/seed-2026_left_full_white.png",
+      "caption": "奶蛙捧腹大笑，左前方视角，全身，白色背景",
+      "view": "left",
+      "framing": "full",
+      "background": "white",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        231.0,
+        232.0,
+        229.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.043255927079148486,
+      "nearest_neighbor": {
+        "train_index": 1175,
+        "nearest_image": "images/train/001175.png",
+        "nearest_caption": "奶蛙捧腹大笑，左前方视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.05977548536079439,
+        "same_factors_train_index": 1175,
+        "same_factors_nearest_image": "images/train/001175.png",
+        "same_factors_pixel_rmse_0_to_1": 0.05977548536079439,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_close_blue.png",
+      "file_name": "images/seed-2026_right_close_blue.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，蓝色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "blue",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        123.0,
+        154.0,
+        219.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10825234307327262,
+      "nearest_neighbor": {
+        "train_index": 66,
+        "nearest_image": "images/train/000066.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，蓝色背景",
+        "pixel_rmse_0_to_1": 0.09251932229105762,
+        "same_factors_train_index": 66,
+        "same_factors_nearest_image": "images/train/000066.png",
+        "same_factors_pixel_rmse_0_to_1": 0.09251932229105762,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_close_pink.png",
+      "file_name": "images/seed-2026_right_close_pink.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，粉色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "pink",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        224.0,
+        152.0,
+        177.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.1006960270461216,
+      "nearest_neighbor": {
+        "train_index": 1214,
+        "nearest_image": "images/train/001214.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，粉色背景",
+        "pixel_rmse_0_to_1": 0.08421984663249649,
+        "same_factors_train_index": 1214,
+        "same_factors_nearest_image": "images/train/001214.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08421984663249649,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_close_green.png",
+      "file_name": "images/seed-2026_right_close_green.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，绿色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "green",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        152.0,
+        200.0,
+        161.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.09373560806273233,
+      "nearest_neighbor": {
+        "train_index": 2675,
+        "nearest_image": "images/train/002675.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，绿色背景",
+        "pixel_rmse_0_to_1": 0.0850037653777533,
+        "same_factors_train_index": 2675,
+        "same_factors_nearest_image": "images/train/002675.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0850037653777533,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_close_white.png",
+      "file_name": "images/seed-2026_right_close_white.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，近景，白色背景",
+      "view": "right",
+      "framing": "close",
+      "background": "white",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        232.0,
+        233.0,
+        229.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.040565021305053336,
+      "nearest_neighbor": {
+        "train_index": 1440,
+        "nearest_image": "images/train/001440.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，近景，白色背景",
+        "pixel_rmse_0_to_1": 0.06404888443736367,
+        "same_factors_train_index": 1440,
+        "same_factors_nearest_image": "images/train/001440.png",
+        "same_factors_pixel_rmse_0_to_1": 0.06404888443736367,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_full_blue.png",
+      "file_name": "images/seed-2026_right_full_blue.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，蓝色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "blue",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        124.0,
+        156.0,
+        220.0
+      ],
+      "background_predicted_from_corners": "blue",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10311066035511122,
+      "nearest_neighbor": {
+        "train_index": 378,
+        "nearest_image": "images/train/000378.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，蓝色背景",
+        "pixel_rmse_0_to_1": 0.08844106136146856,
+        "same_factors_train_index": 378,
+        "same_factors_nearest_image": "images/train/000378.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08844106136146856,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_full_pink.png",
+      "file_name": "images/seed-2026_right_full_pink.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，粉色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "pink",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        224.0,
+        152.0,
+        176.0
+      ],
+      "background_predicted_from_corners": "pink",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.10208639823879442,
+      "nearest_neighbor": {
+        "train_index": 2697,
+        "nearest_image": "images/train/002697.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，粉色背景",
+        "pixel_rmse_0_to_1": 0.08423330144825508,
+        "same_factors_train_index": 2697,
+        "same_factors_nearest_image": "images/train/002697.png",
+        "same_factors_pixel_rmse_0_to_1": 0.08423330144825508,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_full_green.png",
+      "file_name": "images/seed-2026_right_full_green.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，绿色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "green",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        154.0,
+        202.0,
+        163.0
+      ],
+      "background_predicted_from_corners": "green",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.08609607215725548,
+      "nearest_neighbor": {
+        "train_index": 725,
+        "nearest_image": "images/train/000725.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，绿色背景",
+        "pixel_rmse_0_to_1": 0.07094078259419086,
+        "same_factors_train_index": 725,
+        "same_factors_nearest_image": "images/train/000725.png",
+        "same_factors_pixel_rmse_0_to_1": 0.07094078259419086,
+        "exact_rgb_training_matches": 0
+      }
+    },
+    {
+      "image": "images/seed-2026_right_full_white.png",
+      "file_name": "images/seed-2026_right_full_white.png",
+      "caption": "奶蛙捧腹大笑，右前方视角，全身，白色背景",
+      "view": "right",
+      "framing": "full",
+      "background": "white",
+      "seed": 2026,
+      "checkpoint_step": 10000,
+      "ddim_steps": 50,
+      "guidance": 2.5,
+      "ema": true,
+      "initial_noise_sha256": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d",
+      "corner_median_rgb": [
+        231.0,
+        232.0,
+        228.0
+      ],
+      "background_predicted_from_corners": "white",
+      "background_target_matches_nearest_rgb_reference": true,
+      "background_rgb_rmse_0_to_1": 0.0444828745808459,
+      "nearest_neighbor": {
+        "train_index": 1979,
+        "nearest_image": "images/train/001979.png",
+        "nearest_caption": "奶蛙捧腹大笑，右前方视角，全身，白色背景",
+        "pixel_rmse_0_to_1": 0.0651617560553266,
+        "same_factors_train_index": 1979,
+        "same_factors_nearest_image": "images/train/001979.png",
+        "same_factors_pixel_rmse_0_to_1": 0.0651617560553266,
+        "exact_rgb_training_matches": 0
+      }
+    }
+  ],
+  "limitations": [
+    "This is a same-subject synthetic-render evaluation at 64x64, not an open-domain text-to-image benchmark.",
+    "Background matching uses four corner patches and empirical RGB references; it does not assess subject quality or text understanding.",
+    "Pixel nearest-neighbor distance is sensitive to background, camera, alignment and lighting. A nonzero distance cannot prove absence of memorization, and a small distance alone cannot prove copying.",
+    "Factor panels use the same starting-noise seed for controlled visual comparison. View/framing changes require human inspection; pixel changes do not establish correct semantic control.",
+    "No FID, CLIP score, perceptual-quality claim or statistically validated generalization claim is produced."
+  ],
+  "generation_info": {
+    "checkpoint": "release-assets/naifrog_ema.pt",
+    "checkpoint_sha256": "5445e9ef7fca9c1b47a1c235995d09b7aaaadcd3974290d6c9d5fd751e64777e",
+    "checkpoint_step": 10000,
+    "seeds": [
+      42,
+      123,
+      2026
+    ],
+    "images": 72,
+    "same_initial_noise_within_seed": true,
+    "initial_noise_sha256_by_seed": {
+      "42": "44033fccd6ab0fd353beaae5be35a57a07d2337ac8bb77f409fa8bdafa2c2366",
+      "123": "fe9bddfacf3c62e42f3590f109cec96453b44d6a56b8f272392da5663233ea18",
+      "2026": "1165ea2fbea24352c7c260ac2321824a80e3318a633154699e94e670fa43b29d"
+    },
+    "ddim_steps": 50,
+    "guidance": 2.5,
+    "ema": true,
+    "cpu_threads": 4
+  }
+}

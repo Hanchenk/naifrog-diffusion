@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "source": "User-supplied FBX converted to UV-preserving simplified GLB; no external datasets or pretrained model weights",
+  "source_glb": "assets/character.glb (user-supplied; not distributed)",
+  "image_size": [
+    64,
+    64
+  ],
+  "render_size": [
+    128,
+    128
+  ],
+  "counts": {
+    "train": 4080,
+    "val": 504
+  },
+  "combinations": 24,
+  "per_combination": {
+    "train": 170,
+    "val": 21
+  },
+  "caption_template": "奶蛙捧腹大笑，{view}视角，{framing}，{background}背景",
+  "factors": {
+    "view": {
+      "front": "正面",
+      "left": "左前方",
+      "right": "右前方"
+    },
+    "framing": {
+      "close": "近景",
+      "full": "全身"
+    },
+    "background": {
+      "blue": "蓝色",
+      "pink": "粉色",
+      "green": "绿色",
+      "white": "白色"
+    }
+  },
+  "randomization": {
+    "seeds": {
+      "train": "1000000 + combo_index*10000 + n",
+      "val": "9000000 + combo_index*10000 + n"
+    },
+    "yaw_degrees": {
+      "front": [
+        -8,
+        8
+      ],
+      "left": [
+        -40,
+        -25
+      ],
+      "right": [
+        25,
+        40
+      ]
+    },
+    "camera_pitch_degrees": [
+      3,
+      10
+    ],
+    "camera_half_extent": {
+      "close": [
+        1.55,
+        1.65
+      ],
+      "full": [
+        1.98,
+        2.12
+      ]
+    },
+    "camera_center_y": {
+      "close": [
+        0.22,
+        0.32
+      ],
+      "full": [
+        -0.04,
+        0.04
+      ]
+    },
+    "camera_center_x": [
+      -0.08,
+      0.08
+    ],
+    "model_roll_radians": [
+      -0.018,
+      0.018
+    ],
+    "model_pitch_radians": [
+      -0.012,
+      0.012
+    ],
+    "background_HSL_jitter": {
+      "h": [
+        -0.008,
+        0.008
+      ],
+      "s": [
+        -0.025,
+        0.025
+      ],
+      "l": [
+        -0.025,
+        0.025
+      ]
+    },
+    "light_intensities": {
+      "key": [
+        3.5,
+        4.3
+      ],
+      "fill": [
+        1.7,
+        2.4
+      ],
+      "hemisphere": [
+        2.1,
+        2.6
+      ]
+    }
+  },
+  "split_note": "All factor combinations appear in both splits; continuous render seeds are disjoint. This validates new render variations of the same supplied model, not unseen subjects or unseen compositions.",
+  "browser_errors": []
+}

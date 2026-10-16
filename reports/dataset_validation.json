@@ -1,0 +1,22 @@
+{
+  "train": {
+    "count": 4080,
+    "combinations": 24,
+    "per_combination": [
+      170
+    ]
+  },
+  "val": {
+    "count": 504,
+    "combinations": 24,
+    "per_combination": [
+      21
+    ]
+  },
+  "total_images": 4584,
+  "all_images_64x64": true,
+  "unique_seeds": 4584,
+  "unique_png_hashes": 4584,
+  "exact_cross_split_duplicate_count": 0,
+  "browser_errors": []
+}
