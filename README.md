@@ -140,6 +140,8 @@ python evaluation/plot_training.py --metrics runs/naifrog/metrics.jsonl \
 
 数值检查包括固定样本目标下降、文本梯度、padding 屏蔽、已知真实噪声的 oracle DDIM、检查点往返、固定 seed 重复与 CFG=0 的无条件一致性。通过数值检查不代表所有生成结果都正确。
 
+公开发布后已再次从 GitHub 克隆代码、下载 Release 权重并复跑数值验证和推理，生成结果与原实验逐像素一致。复用已有 PyTorch 环境，未重新安装全部依赖；记录见 [公开版本复跑报告](reports/public_release_smoke.json)。
+
 ## 目录
 
 ```text

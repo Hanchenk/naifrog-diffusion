@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "public_repository": "https://github.com/Hanchenk/naifrog-diffusion",
+  "release": "v1.0.0",
+  "commit": "347201bd6a0e3f80c49615795762dfe18cf13f84",
+  "clean_checkout_before_execution": true,
+  "download_url": "https://github.com/Hanchenk/naifrog-diffusion/releases/download/v1.0.0/naifrog_ema.pt",
+  "weight_sha256": "5445e9ef7fca9c1b47a1c235995d09b7aaaadcd3974290d6c9d5fd751e64777e",
+  "weight_bytes": 37840187,
+  "same_pixels_as_original_run": true,
+  "inference_png_sha256": "a8368adf530702155d8d15da8f45882c34c157448d956d260dd53f78c099c8d7",
+  "seed": 42,
+  "ddim_steps": 50,
+  "guidance": 2.5,
+  "ema": true,
+  "checkpoint_training_step": 10000,
+  "completed_at_utc": "2026-10-16T03:46:10.627610+00:00",
+  "execution_environment": "Reused the existing PyTorch environment; fresh public Git checkout and Release download, not a fresh dependency installation.",
+  "verify_returncode": 0,
+  "infer_returncode": 0
+}
